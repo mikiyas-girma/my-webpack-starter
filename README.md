@@ -1,4 +1,4 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome my-webpack-project!
 
 This project has been created using **webpack-cli**.
 

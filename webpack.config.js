@@ -6,10 +6,14 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 
 const config = {
-    entry: './src/',
+
+    entry: {
+        app: './src/app.js',
+      },
+
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
     },
     devServer: {
         open: true,
@@ -43,7 +47,7 @@ module.exports = () => {
         
         
     } else {
-        config.mode = 'development';
+        // config.mode = 'development';
     }
     return config;
 };

@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "babel": "babel src/ -o build/app.bundle.js --presets @babel/preset-env",
-    "build": "webpack -w",
+    "build": "webpack",
     "start": "webpack serve --mode=development --output-public-path=/build/",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production",

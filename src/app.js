@@ -1,3 +1,1 @@
-let x=1;
-
-console.log(`this is mike performing`)
+console.log('mikes webpack starter')

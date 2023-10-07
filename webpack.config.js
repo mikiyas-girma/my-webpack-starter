@@ -2,52 +2,26 @@
 
 const path = require('path');
 
-const isProduction = process.env.NODE_ENV == 'production';
-
-
-const config = {
-
+module.exports = {
+    mode: 'development',
     entry: {
-        app: './src/app.js',
-      },
-
+      bundle:  path.resolve(__dirname, 'src/app.js'),
+    },
     output: {
-        filename: '[name].bundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
-    },
+        publicPath: '/build/',
+        },
     devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'build'),
+            directory: path.join(__dirname, 'src')
+        },
+        port: 3000,
         open: true,
-        host: 'localhost',
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
     },
-    plugins: [
-        // Add your plugins here
-        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/i,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-            },
-            {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
-            },
+}
 
-            // Add your rules for custom modules here
-            // Learn more about loaders from https://webpack.js.org/loaders/
-        ],
-    },
-};
-
-module.exports = () => {
-    if (isProduction) {
-        config.mode = 'production';
-        
-        
-    } else {
-        // config.mode = 'development';
-    }
-    return config;
-};

@@ -1,4 +1,4 @@
-# 🚀 Welcome my-webpack-project!
+# 🚀 Welcome my-webpack-starter-kit!
 
 This project has been created using **webpack-cli**.
 
@@ -29,18 +29,4 @@ If you would like to contribute to this project, please follow these steps:
 5. Create a pull request on the original repository.
 
 Happy coding!
-# 🚀 Welcome to your new awesome project!
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
